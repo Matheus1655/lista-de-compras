@@ -1,10 +1,12 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f7f7f7;
+  background: url('fundo-comida.png');
+  background-size: cover;
   display: flex;
   justify-content: center;
   padding-top: 50px;
 }
+
 
 .container {
   background: white;
@@ -28,7 +30,6 @@ input {
 
 button {
   padding: 8px;
-  margin-top: 5px;
   margin-left: 5px;
   background-color: #2e8b57;
   color: white;
@@ -37,17 +38,8 @@ button {
   border-radius: 4px;
 }
 
-#limpar {
-  margin-left: 0;
-  background-color: #a52a2a;
-}
-
 button:hover {
   background-color: #246b45;
-}
-
-#limpar:hover {
-  background-color: #800000;
 }
 
 ul {
@@ -64,9 +56,18 @@ li {
   align-items: center;
 }
 
+li.comprado {
+  text-decoration: line-through;
+  color: gray;
+}
 li div {
   display: flex;
   gap: 5px;
+}
+
+button {
+  border-radius: 4px;
+  padding: 5px;
 }
 
 li.comprado span {

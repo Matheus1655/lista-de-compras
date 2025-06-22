@@ -1,3 +1,4 @@
+// Carregar lista salva ao abrir
 window.onload = () => {
   const dadosSalvos = localStorage.getItem("lista");
   if (dadosSalvos) {
@@ -5,6 +6,7 @@ window.onload = () => {
   }
 };
 
+// Adiciona item novo
 function adicionarItem() {
   const input = document.getElementById("itemInput");
   const lista = document.getElementById("lista");
@@ -13,13 +15,13 @@ function adicionarItem() {
   if (itemTexto === "") return;
 
   const li = document.createElement("li");
-  li.innerHTML = \`
-    <span>\${itemTexto}</span>
+  li.innerHTML = `
+    <span>${itemTexto}</span>
     <div>
       <button onclick="marcarItem(this)">✅</button>
       <button onclick="removerItem(this)">🗑️</button>
     </div>
-  \`;
+  `;
 
   lista.appendChild(li);
   input.value = "";
@@ -31,18 +33,16 @@ function removerItem(botao) {
   salvarLista();
 }
 
+
 function marcarItem(botao) {
-  const li = botao.closest("li");
+  const li = botao.parentElement.parentElement;
   li.classList.toggle("comprado");
   salvarLista();
 }
 
+
+// Salva no navegador
 function salvarLista() {
   const lista = document.getElementById("lista");
   localStorage.setItem("lista", lista.innerHTML);
-}
-
-function limparLista() {
-  localStorage.removeItem("lista");
-  document.getElementById("lista").innerHTML = "";
 }

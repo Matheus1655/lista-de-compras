@@ -1,11 +1,16 @@
 body {
   font-family: Arial, sans-serif;
-  background: url('fundo-comida.png');
-  background-size: cover;
+  background: url('comida-papel-de-parede.png');
+  background-size: 100% auto; 
+  background-repeat: no-repeat; 
+  background-position: center; 
   display: flex;
   justify-content: center;
   padding-top: 50px;
 }
+
+
+
 
 .container {
   background: white;
@@ -13,25 +18,25 @@ body {
   border-radius: 10px;
   width: 300px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  border: 2px solid #2e8b57;
+  border: 2px solid #bcd22c;
 }
 
 h1 {
-  color: #2e8b57;
+  color: #bcd22c;
   text-align: center;
 }
 
 input {
   width: 70%;
   padding: 8px;
-  border: 1px solid #2e8b57;
+  border: 1px solid #bcd22c;
 }
 
 button {
   padding: 8px;
   margin-top: 5px;
   margin-left: 5px;
-  background-color: #2e8b57;
+  background-color: #bcd22c;
   color: white;
   border: none;
   cursor: pointer;
@@ -44,7 +49,7 @@ button {
 }
 
 button:hover {
-  background-color: #246b45;
+  background-color: #bcd22c;
 }
 
 #limpar:hover {
